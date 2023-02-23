@@ -1,0 +1,26 @@
+{
+  "name": "hello_tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheptegei-create/hello_tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheptegei-create/hello_tech/issues"
+  },
+  "homepage": "https://github.com/cheptegei-create/hello_tech#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "sequelize": "^6.28.2",
+    "sqlite3": "^5.1.4"
+  }
+}
