@@ -6,16 +6,20 @@ router.get('/', withAuth, async (req, res) => {
     try {
       // Get all projects and JOIN with user data
       const blogData = await Blog.findAll({
+        where: {
+          user_id: req.session.user_id
+        },
         include: [
           {
-            model: User,
-            attributes: ['user_name'],
+            model: User
           },
         ],
       });
   
       // Serialize data so the template can read it
       const blogs = blogData.map((blog) => blog.get({ plain: true }));
+
+      console.log(blogs)
   
       // Pass serialized data and session flag into template
       res.render('dashboard', { 
@@ -47,3 +51,5 @@ router.get('/', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  module.exports = router;
