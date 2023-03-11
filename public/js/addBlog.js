@@ -5,7 +5,7 @@ const addBlogButtonHandler = async (event) => {
   const body = document.querySelector('#content').value.trim()
 
   if (title && body) {
-    const response = await fetch('/api/profile', {
+    const response = await fetch('/api/dashboard', {
       method: 'POST',
       body: JSON.stringify({ title, body }),
       headers: { 'Content-Type': 'application/json' }
@@ -25,7 +25,7 @@ const deleteBlogButtonHandler = async (event) => {
 
     const response = await fetch(`/api/dashboard/${id}`, {
       method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
+      // headers: { 'Content-Type': 'application/json' },
     })
 
     if (response.ok) {
