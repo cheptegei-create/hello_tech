@@ -5,14 +5,14 @@ const addBlogButtonHandler = async (event) => {
   const body = document.querySelector('#content').value.trim()
 
   if (title && body) {
-    const response = await fetch('/api/blog', {
+    const response = await fetch('/api/dashboard', {
       method: 'POST',
       body: JSON.stringify({ title, body }),
       headers: { 'Content-Type': 'application/json' }
     })
 
     if (response.ok) {
-      document.location.replace('/profile')
+      document.location.replace('api/dashboard')
     } else {
       alert(response.statusText)
     }
@@ -23,8 +23,9 @@ const deleteBlogButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id')
 
-    const response = await fetch(`/api/blog/${id}`, {
-      method: 'DELETE'
+    const response = await fetch(`/api/dashboard/${id}`, {
+      method: 'DELETE',
+      // headers: { 'Content-Type': 'application/json' },
     })
 
     if (response.ok) {

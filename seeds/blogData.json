@@ -1,14 +1,17 @@
 [
   {
     "title": "Best way to write commit messages",
-    "body": "start by indicating whether you're building or fixing the code, and then followed by the commit message."
+    "body": "start by indicating whether you're building or fixing the code, and then followed by the commit message.",
+    "user_id": 1
   },
   {
     "title": "Writing a Professional Readme File",
-    "body": "Start by selecting a unique title followed by a description that clearly explains what made you create the project, what problems does it solve, and who is the user."
+    "body": "Start by selecting a unique title followed by a description that clearly explains what made you create the project, what problems does it solve, and who is the user.",
+    "user_id": 2
   },
   {
     "title": "Git cheats",
-    "body": "use git init to initiate a git repository, use git add to add information to the repository, use git commit to commit the update and leave a message to explain the update, use git push to push the data remotely to github."
+    "body": "use git init to initiate a git repository, use git add to add information to the repository, use git commit to commit the update and leave a message to explain the update, use git push to push the data remotely to github.",
+    "user_id": 3
   }
 ]
