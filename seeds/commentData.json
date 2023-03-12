@@ -1,14 +1,17 @@
 [
   {
     "body": "start by indicating whether you're building or fixing the code, and then followed by the commit message.",
-    "user_id": 1
+    "user_id": 1,
+    "blog_id": 2
   },
   {
     "body": "Start by selecting a unique title followed by a description that clearly explains what made you create the project, what problems does it solve, and who is the user.",
-    "user_id": 2
+    "user_id": 2,
+    "blog_id": 1
   },
   {
     "body": "use git init to initiate a git repository, use git add to add information to the repository, use git commit to commit the update and leave a message to explain the update, use git push to push the data remotely to github.",
-    "user_id": 3
+    "user_id": 3,
+    "blog_id": 3
   }
 ]
