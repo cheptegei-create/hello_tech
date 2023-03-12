@@ -17,10 +17,10 @@
           comment-id="{{comment.id}}"
         >
           <h6>Commented by
-            {{comment.user.username}}
-            on
-            {{format_date comment.date_created}}:</h6>
-          <p>{{comment.body}}</p>
+            {{comment.user.user_name}}
+            </h6>
+          <p>{{comment.comment_body}}</p>
+        
           {{! Only delete/edit comments if they are the owner of it (by nature, this means they must also be logged in to
       delete/edit their own comments) }}
           {{#if (is_user comment.user_id)}}
@@ -64,6 +64,7 @@
             type="text"
             id="blog-title"
             name="blog-title"
+            project-id="{{id}}"
           />
         </div>
         <div class="form-group">
@@ -71,6 +72,7 @@
             id="submit-comment"
             type="submit"
             class="btn btn-primary"
+            project-id="{{id}}"
           >SAVE</button>
         </div>
       </form>
