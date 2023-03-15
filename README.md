@@ -14,7 +14,10 @@ Knowledge is meant to be shared, and considering the complex dynamic nature of t
 
 ## Installation
 
-Clone the repo, install npm packages, start the database by scheming the schema file, seed data, and then run npm start.
+Clone the repo using the github link below, install npm packages, start the database by scheming the schema file, seed data, and then run npm start. Alternatively, you can just click my heroku deployed link and proceed to the website
+
+Heroku Deployed Link: https://limitless-cliffs-14157.herokuapp.com/
+Github: https://github.com/cheptegei-create/hello_tech
 
 ## Usage
 
