@@ -1,22 +1,22 @@
-const blogComment = document.querySelectorAll("#blog-title");
-const submitButton = document.querySelectorAll("#submit-comment");
+const blogComment = document.getElementById("comment_body");
+const submitButton = document.getElementById("submit-comment");
 const editButtons = document.querySelectorAll(".edit");
 const cancelButtons = document.querySelectorAll(".cancel");
 
 // Submitting new comment
 const submitButtonHandler = async (event) => {
   event.preventDefault();
-  const body = blogComment.value;
+  const comment_body = blogComment.value;
   const blog_id = submitButton.getAttribute("project-id");
 
-  if (!body) {
+  if (!comment_body) {
     window.alert("Please enter comment text.");
   }
 
-  if (body && blog_id) {
-    const newComment = await fetch("/api/comments/", {
+  if (comment_body && blog_id) {
+    const newComment = await fetch("/api/comments", {
       method: "POST",
-      body: JSON.stringify({ body, blog_id }),
+      body: JSON.stringify({ comment_body, blog_id }),
       headers: { "Content-Type": "application/json" },
     });
 

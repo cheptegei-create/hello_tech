@@ -4,26 +4,25 @@ const withAuth = require("../../utils/auth");
 
 router.post("/", withAuth, async (req, res) => {
   try {
-    const newComment = await Comments.create({ 
-      body: req.body.body,
+    const commentData = await Comments.create({
+      comment_body: req.body.comment_body,
       commenter_id: req.session.user_id,
-      blog_id: req.body.blog_id
-    })
+      blog_id: req.body.blog_id,
+    });
 
-    
-        res.status(200).json(newComment);
-  } catch(err) {
-      res.status(400).json(err);
-    }
+    res.status(200).json(commentData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 // Delete a comment (use withAuth middleware to authenticate access)
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const deleteComment = await Comments.destroy({
       where: {
-        id: req.params.id
-      }
+        id: req.params.id,
+      },
     });
 
     res.status(200).json(deleteComment);
@@ -33,19 +32,18 @@ router.delete('/:id', withAuth, async (req, res) => {
 });
 
 // Update a comment (use withAuth middleware to authenticate access)
-router.put('/:id', withAuth, async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
-
     const updatedComment = req.body.updatedText;
 
     const updateComment = await Comments.update(
       {
-        body: updatedComment
+        body: updatedComment,
       },
       {
         where: {
-          id: req.params.id
-        }
+          id: req.params.id,
+        },
       }
     );
 
