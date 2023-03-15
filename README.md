@@ -20,7 +20,10 @@ Clone the repo, install npm packages, start the database by scheming the schema 
 
 When you open the hello_tech on your browser, the user will be presented with a home page with all the recent blogs displayed, but limited to comment or add a blog until the user logs in. When the user logs in, it redirects to the user's dashboard where he can create new blogs, and view all of their past blogs. The user can also delete a blog or update it. When the user clicks on a blog, then it directs to the comments page where they can view all the past comments, add a comment, edit or delete a comment.
 
-![alt text](assets/images/screenshot.png)
+![Home page screen](./public/assets/images/home.JPG)
+![login page screen](./public/assets/images/login.JPG)
+![dashboard screen](./public/assets/images/dashboard.JPG)
+![comment section screen](./public/assets/images/comment.JPG)
 
 
 ## Credits
