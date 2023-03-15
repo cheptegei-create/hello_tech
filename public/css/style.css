@@ -1,0 +1,72 @@
+:root {
+    --navy: navy;
+    --dark: black;
+}
+* {
+    font-family: Dancing Script, La Belle Aurore;
+    color: white;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("../assets/images/background-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
+header,
+footer {
+    background-color: var(--navy);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-comment {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 200px;
+    width: 500px;
+    border: solid 3px;
+    border-radius: 10px;
+    border-color: var(--navy);
+}
+
+.login-sec {
+    background-color: var(--dark) !important;
+}
+
+#email-login {
+    margin-left: 23.5px;
+}
+
+#title-name {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+#content {
+    height: 200px;
+    width: 300px;
+    margin-bottom: 5px;
+    border: solid 3px;
+    border-radius: 10px;
+    border-color: var(--navy);
+}
+
+#logout {
+    background-color: var(--navy);
+}
+
+#blog-display,
+#deleteButton,
+#editButton {
+    background-color: var(--dark);
+}
+
+#comment-section {
+    background-color: var(--dark);
+}
