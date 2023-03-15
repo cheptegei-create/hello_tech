@@ -1,6 +1,6 @@
 <div class="text-center">
 
-  <div class="card">
+  <div id="blog-display" class="card">
     <h2>{{blog.title}}</h2>
     <p>{{blog.body}}</p>
     <p>Created by {{blog.user.user_name}} on {{format_date blog.date_created}}</p>
@@ -55,12 +55,12 @@
   <br /><br />
   {{#if logged_in}}
     <hr class="hr" />
-    <div class="card">
+    <div id="comment-section" class="card">
       <form class="form">
         <div class="form-group">
           <label for="comment_body">Comment:</label>
           <input
-            class="form-input"
+            class="form-input add-comment"
             type="text"
             id="comment_body"
             name="comment_body"
