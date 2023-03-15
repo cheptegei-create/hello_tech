@@ -1,3 +1,29 @@
-<div class="row text-center">
-  <h1>Welcome to Hello-Tech!</h1>
-</div>
+{{#if logged_in}}
+  <div class="row text-center">
+    <h1>Welcome to Hello-Tech!</h1>
+  </div>
+{{else}}
+  <h4 class="greeting">Below are some blog post you can peruse.</h4>
+
+  <br />
+
+  {{#each blogs as |blog|}}
+    <div class="blog-wrapper">
+      <div class="col-md-5">
+        <h2 class="blog-title">
+          {{blog.title}}
+        </h2>
+
+        <p class="author">Posted by
+          {{blog.user.username}}
+          on
+          {{format_date blog.date_created}}</p>
+      </div>
+      <div class="col-md-7">
+        <p class="blog-body">
+          {{blog.body}}
+        </p>
+      </div>
+    </div>
+  {{/each}}
+{{/if}}
