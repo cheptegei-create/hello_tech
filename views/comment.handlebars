@@ -17,13 +17,13 @@
           comment-id="{{comment.id}}"
         >
           <h6>Commented by
-            {{comment.user.user_name}} on {{format_date comment.date_created}}
+            {{comment.user.user_name}} on {{format_date comment.date_created}} for {{comment.blog.title}}
             </h6>
           <p>{{comment.comment_body}}</p>
         
           {{! Only delete/edit comments if they are the owner of it (by nature, this means they must also be logged in to
       delete/edit their own comments) }}
-          {{#if (is_user comment.user_id)}}
+          {{#if (is_user comment.user.id ../user_id)}}
             <button
               class="deleteButton buttons submit"
               id="deleteButton"
@@ -43,7 +43,7 @@
                 project-id="{{id}}"
               >{{body}}</textarea>
               <button class="cancel buttons submit">Cancel</button>
-              <button class="save-button buttons submit">Update Comment</button>
+              <button id="save-button" class="save-button buttons submit">Update Comment</button>
             </form>
           {{/if}}
 

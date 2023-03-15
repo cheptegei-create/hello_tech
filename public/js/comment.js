@@ -59,13 +59,14 @@ const editButtonHandler = async (event) => {
   );
   event.target.setAttribute("style", "display:none");
 
-  const comment_id = event.target.getAttribute("comment-id");
-  const saveButton = event.target.nextElementSibling.children[3];
+  const id = event.target.getAttribute("comment-id");
+  const saveButton = event.target.getElementById('save-button');
+  console.warn(id);
 
   async function saveComment(e) {
     e.preventDefault();
 
-    const updatedText = event.target.nextElementSibling.children[1].value;
+    const updatedText = event.target.getElementById('commentText').value;
 
     // If textarea is left blank by mistake
     if (updatedText.length === 0) {
@@ -74,8 +75,9 @@ const editButtonHandler = async (event) => {
     }
 
     // PUT request to the server to update user comment
-    if (updatedText && comment_id) {
-      const updateComment = await fetch(`/api/comments/${comment_id}`, {
+    if (updatedText && id) {
+      console.warn(id);
+      const updateComment = await fetch(`/api/comments/${id}`, {
         method: "PUT",
         body: JSON.stringify({ updatedText }),
         headers: { "Content-Type": "application/json" },
